@@ -1,47 +1,107 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Activity 1: Basic HTML Bio</title>
+    <title>Web Visualization Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 
-<body>
-<H1>Welcome to <STORN>Jatin Patel</STORN>'s Home Page</H1>
 
-<p>
-  Glad to see you visiting my page....  Spend some time here and get to know few things.
-</p>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">LATITUDE</a>
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="data.html">Data <span class="sr-only">(current)</span></a></li>
+                  <li><a href="comparison.html">Comparison</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="temperature.html">Temperature</a></li>
+                      <li><a href="humidity.html">Humidity</a></li>
+                      <li><a href="cloudiness.html">Cloudiness</a></li>
+                      <li><a href="wind_speed.html">Wind Speed</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                </li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
 
-<p>
-  <h3>Countries Visited</h3>
-  <ul>
-    <li>USA</li>
-    <li>France</li>
-    <li>Germany</li>
-  </ul>
-</p>
+      <!-- Our rows function in containers (grid created). -->
+      <div class="container">
 
-<p>
-  <h3>Order Matters</h3>
-  <ol>
-    <li>One</li>
-    <li>Two</li>
-    <li>Three</li>
-  </ol>
-</p>
-
-<table>
-  <tr>
-    <th>Countries</th>
-    <th>Languages</th>
-    <th>Do I know?</th>
-  </tr>
-  <tr>
-    <td>France</td>
-    <td>French</td>
-    <td>no</td>
-  </tr>
-</table>
-</body>
-
-</html>
+          <!-- Summary Column-->
+          <div class="col-md-6">
+             <H2>Summary:  Latitude Vs. X</H2>
+             <p>Click any plot on the right to get in-depth analysis</p>
+             <img src="images/temp.png" alt="Summary Image"  height="500" width="600" >
+             <p> The 4 data generated graphs for this assignment are: <br>    
+                     * Temperature (F) against Latitude <br>
+                     * Humidity (%) against Latitude <br>
+                     * Cloudiness(%) against Latitude <br>
+                     * Wind Speed (mph) against Latitude <br>
+                     Of course, land and water formations, along with current weather patterns will all affect these charts on any given day, and a true analysis would be better viewed over the averages over a larger time period.<br>
+                     Click a figure for trends
+           </p>
+             <br>  
+          </div> 
+         
+        <!--Visualization Column-->
+        <div class="col-md-6">  
+          <div class="row">
+            <H2> Visualizations</H2>
+          </div>
+        <div class="row">
+          <div class="col-md-6">
+            <a href="temperature.html">
+              <p>Temperature</p>
+              <img src="images/temp.png" alt="Temperature" height="100" width="100"> <a href="temperature.html"></a>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a href="humidity.html">
+              <p>Humidity</p>
+              <img src="images/humidity.png" alt="Humidity" height="100" width="100">
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <a href="cloudiness.html">
+              <p>Cloudiness</p>
+              <img src="images/cloudiness.png" alt="Cloudiness" height="100" width="100">
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a href="wind_speed.html">
+              <p>Wind Speed</p>
+              <img src="images/wind_speed.png" alt="Wind Speed" height="100" width="100">
+            </a>
+          </div>
+      </div>
+    </div>
+  </body>
